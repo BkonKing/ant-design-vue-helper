@@ -1,56 +1,61 @@
 {
+	"a-col/flex": {
+		"description": "flex 布局填充",
+		"optionType": "string|number",
+		"defaultValue": "-"
+	},
 	"a-col/offset": {
-		"description": "the number of cells to offset Col from the left",
+		"description": "栅格左侧的间隔格数，间隔内不可以有栅格",
 		"optionType": "number",
 		"defaultValue": "0"
 	},
 	"a-col/order": {
-		"description": "raster order, used in flex layout mode",
+		"description": "栅格顺序，flex 布局模式下有效",
 		"optionType": "number",
 		"defaultValue": "0"
 	},
 	"a-col/pull": {
-		"description": "the number of cells that raster is moved to the left",
+		"description": "栅格向左移动格数",
 		"optionType": "number",
 		"defaultValue": "0"
 	},
 	"a-col/push": {
-		"description": "the number of cells that raster is moved to the right",
+		"description": "栅格向右移动格数",
 		"optionType": "number",
 		"defaultValue": "0"
 	},
 	"a-col/span": {
-		"description": "raster number of cells to occupy, 0 corresponds to display: none",
+		"description": "栅格占位格数，为 0 时相当于 display: none",
 		"optionType": "number",
-		"defaultValue": "none"
+		"defaultValue": "-"
 	},
 	"a-col/xs": {
-		"description": "<576px and also default setting, could be a span value or an object containing above props",
+		"description": "<576px 响应式栅格，可为栅格数或一个包含其他属性的对象",
 		"optionType": "number|object",
 		"defaultValue": "-"
 	},
 	"a-col/sm": {
-		"description": "≥576px, could be a span value or an object containing above props",
+		"description": "≥576px 响应式栅格，可为栅格数或一个包含其他属性的对象",
 		"optionType": "number|object",
 		"defaultValue": "-"
 	},
 	"a-col/md": {
-		"description": "≥768px, could be a span value or an object containing above props",
+		"description": "≥768px 响应式栅格，可为栅格数或一个包含其他属性的对象",
 		"optionType": "number|object",
 		"defaultValue": "-"
 	},
 	"a-col/lg": {
-		"description": "≥992px, could be a span value or an object containing above props",
+		"description": "≥992px 响应式栅格，可为栅格数或一个包含其他属性的对象",
 		"optionType": "number|object",
 		"defaultValue": "-"
 	},
 	"a-col/xl": {
-		"description": "≥1200px, could be a span value or an object containing above props",
+		"description": "≥1200px 响应式栅格，可为栅格数或一个包含其他属性的对象",
 		"optionType": "number|object",
 		"defaultValue": "-"
 	},
 	"a-col/xxl": {
-		"description": "≥1600px, could be a span value or an object containing above props",
+		"description": "≥1600px 响应式栅格，可为栅格数或一个包含其他属性的对象",
 		"optionType": "number|object",
 		"defaultValue": "-"
 	}

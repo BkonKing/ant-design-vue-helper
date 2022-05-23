@@ -1,173 +1,174 @@
 {
 	"a-select/allowClear": {
-		"description": "Show clear button.",
+		"description": "支持清除",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-select/autoClearSearchValue": {
-		"description": "Whether the current search will be cleared on selecting an item. Only applies when mode is set to multiple or tags.",
+		"description": "是否在选中项后清空搜索框，只在 mode 为 multiple 或 tags 时有效。",
 		"optionType": "boolean",
 		"defaultValue": "true"
 	},
 	"a-select/autoFocus": {
-		"description": "Get focus by default",
+		"description": "默认获取焦点",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-select/defaultActiveFirstOption": {
-		"description": "Whether active first option by default",
+		"description": "是否默认高亮第一个选项。",
 		"optionType": "boolean",
 		"defaultValue": "true"
 	},
 	"a-select/defaultValue": {
-		"description": "Initial selected option.",
-		"optionType": "string|string[]\nnumber|number[]",
+		"description": "指定默认选中的条目",
+		"optionType": "string|string[]|number|number[]",
 		"defaultValue": "-"
 	},
 	"a-select/disabled": {
-		"description": "Whether disabled select",
+		"description": "是否禁用",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-select/dropdownClassName": {
-		"description": "className of dropdown menu",
+		"description": "下拉菜单的 className 属性",
 		"optionType": "string",
 		"defaultValue": "-"
 	},
 	"a-select/dropdownMatchSelectWidth": {
-		"description": "Whether dropdown's width is same with select.",
+		"description": "下拉菜单和选择器同宽",
 		"optionType": "boolean",
 		"defaultValue": "true"
 	},
 	"a-select/dropdownRender": {
-		"description": "Customize dropdown content",
+		"description": "自定义下拉框内容",
 		"optionType": "(menuNode: VNode, props) => VNode",
 		"defaultValue": "-"
 	},
 	"a-select/dropdownStyle": {
-		"description": "style of dropdown menu",
+		"description": "下拉菜单的 style 属性",
 		"optionType": "object",
 		"defaultValue": "-"
 	},
 	"a-select/filterOption": {
-		"description": "If true, filter options by input, if function, filter options against it. The function will receive two arguments, inputValue and option, if the function returns true, the option will be included in the filtered set; Otherwise, it will be excluded.",
+		"description": "是否根据输入项进行筛选。当其为一个函数时，会接收 inputValue option 两个参数，当 option 符合筛选条件时，应返回 true，反之则返回 false。",
 		"optionType": "boolean or function(inputValue, option)",
 		"defaultValue": "true"
 	},
 	"a-select/firstActiveValue": {
-		"description": "Value of action option by default",
+		"description": "默认高亮的选项",
 		"optionType": "string|string[]",
 		"defaultValue": "-"
 	},
 	"a-select/getPopupContainer": {
-		"description": "Parent Node which the selector should be rendered to. Default to body. When position issues happen, try to modify it into scrollable content and position it relative.",
+		"description": "菜单渲染父节点。默认渲染到 body 上，如果你遇到菜单滚动定位问题，试试修改为滚动的区域，并相对其定位。",
 		"optionType": "function(triggerNode)",
 		"defaultValue": "() => document.body"
 	},
 	"a-select/labelInValue": {
-		"description": "whether to embed label in value, turn the format of value from string to {key: string, label: vNodes}",
+		"description": "是否把每个选项的 label 包装到 value 中，会把 Select 的 value 类型从 string 变为 {key: string, label: vNodes} 的格式",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-select/maxTagCount": {
-		"description": "Max tag count to show",
+		"description": "最多显示多少个 tag",
 		"optionType": "number",
 		"defaultValue": "-"
 	},
 	"a-select/maxTagPlaceholder": {
-		"description": "Placeholder for not showing tags",
+		"description": "隐藏 tag 时显示的内容",
 		"optionType": "slot/function(omittedValues)",
 		"defaultValue": "-"
 	},
+	"a-select/maxTagTextLength": {
+		"description": "最大显示的 tag 文本长度",
+		"optionType": "number",
+		"defaultValue": "-"
+	},
 	"a-select/mode": {
-	  "options": ["default", "multiple", "tags"],
-		"description": "Set mode of Select",
-		"optionType": "'default' | 'multiple' | 'tags'",
-		"defaultValue": "'default'"
+	  "options": ["default", "multiple", "tags", "combobox"],
+		"description": "设置 Select 的模式为多选或标签",
+		"optionType": "'default' | 'multiple' | 'tags' | 'combobox'",
+		"defaultValue": "-"
 	},
 	"a-select/notFoundContent": {
-		"description": "Specify content to show when no result matches..",
+		"description": "当下拉列表为空时显示的内容",
 		"optionType": "string|slot",
 		"defaultValue": "'Not Found'"
 	},
 	"a-select/optionFilterProp": {
-		"description": "Which prop value of option will be used for filter if filterOption is true",
+		"description": "搜索时过滤对应的 option 属性，如设置为 children 表示对内嵌内容进行搜索",
 		"optionType": "string",
 		"defaultValue": "value"
 	},
 	"a-select/optionLabelProp": {
-		"description": "Which prop value of option will render as content of select.",
+		"description": "回填到选择框的 Option 的属性值，默认是 Option 的子元素。比如在子元素需要高亮效果时，此值可以设为 value。",
 		"optionType": "string",
-		"defaultValue": "value for combobox, children for other modes"
+		"defaultValue": "children （combobox 模式下为 value）"
 	},
 	"a-select/placeholder": {
-		"description": "Placeholder of select",
+		"description": "选择框默认文字",
 		"optionType": "string|slot",
 		"defaultValue": "-"
 	},
 	"a-select/showSearch": {
-		"description": "Whether show search input in single mode.",
+		"description": "使单选模式可搜索",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-select/showArrow": {
-		"description": "Whether to show the drop-down arrow",
+		"description": "是否显示下拉小箭头",
 		"optionType": "boolean",
 		"defaultValue": "true"
 	},
 	"a-select/size": {
-		"description": "Size of Select input. default large small",
+		"description": "选择框大小，可选 large small",
 		"optionType": "string",
+		"options": ["large", "default", "small"],
 		"defaultValue": "default"
 	},
 	"a-select/suffixIcon": {
-		"description": "The custom suffix icon",
+		"description": "自定义的选择框后缀图标",
 		"optionType": "VNode | slot",
 		"defaultValue": "-"
 	},
 	"a-select/removeIcon": {
-		"description": "The custom remove icon",
+		"description": "自定义的多选框清除图标",
 		"optionType": "VNode | slot",
 		"defaultValue": "-"
 	},
 	"a-select/clearIcon": {
-		"description": "The custom clear icon",
+		"description": "自定义的多选框清空图标",
 		"optionType": "VNode | slot",
 		"defaultValue": "-"
 	},
 	"a-select/menuItemSelectedIcon": {
-		"description": "The custom menuItemSelected icon",
+		"description": "自定义当前选中的条目图标",
 		"optionType": "VNode | slot",
 		"defaultValue": "-"
 	},
 	"a-select/tokenSeparators": {
-		"description": "Separator used to tokenize on tag/multiple mode",
+		"description": "在 tags 和 multiple 模式下自动分词的分隔符",
 		"optionType": "string[]",
 		"defaultValue": ""
 	},
 	"a-select/value": {
-		"description": "Current selected option.",
+		"description": "指定当前选中的条目",
 		"optionType": "string|number|string[]|number[]",
 		"defaultValue": "-"
 	},
 	"a-select/options": {
-		"description": "Data of the selectOption, manual construction work is no longer needed if this property has been set",
+		"description": "options 数据，如果设置则不需要手动构造 selectOption 节点",
 		"optionType": "array<{value, label, [disabled, key, title]}>",
 		"defaultValue": "[]"
 	},
 	"a-select/defaultOpen": {
-		"description": "Initial open state of dropdown",
+		"description": "是否默认展开下拉菜单",
 		"optionType": "boolean",
 		"defaultValue": "-"
 	},
 	"a-select/open": {
-		"description": "Controlled open state of dropdown",
+		"description": "是否展开下拉菜单",
 		"optionType": "boolean",
 		"defaultValue": "-"
-	},
-	"a-select/loading": {
-		"description": "indicate loading state",
-		"optionType": "Boolean",
-		"defaultValue": "false"
 	}
 }

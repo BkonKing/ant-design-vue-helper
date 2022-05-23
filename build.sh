@@ -1,10 +1,25 @@
 #!/bin/bash
 
 echo $1
-mkdir out
+
+dir="out"
+if [ ! -d "$dir" ];then
+mkdir $dir
+echo "创建文件夹成功"
+else
+echo "文件夹已经存在"
+fi
+
 cd out
-mkdir config
-cp -r ../src/config/** ./config/
+configdir="config"
+if [ ! -d "$configdir" ];then
+mkdir $configdir
+echo "创建文件夹成功"
+else
+echo "文件夹已经存在"
+fi
+
+cp -fr ../src/config/** ./config/
 cd ..
 
 tsc $1 -p ./

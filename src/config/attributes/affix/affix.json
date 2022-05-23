@@ -1,16 +1,16 @@
 {
 	"a-affix/offsetBottom": {
-		"description": "Pixels to offset from bottom when calculating position of scroll",
+		"description": "距离窗口底部达到指定偏移量后触发",
 		"optionType": "number",
-		"defaultValue": "-"
+		"defaultValue": ""
 	},
 	"a-affix/offsetTop": {
-		"description": "Pixels to offset from top when calculating position of scroll",
+		"description": "距离窗口顶部达到指定偏移量后触发",
 		"optionType": "number",
-		"defaultValue": "0"
+		"defaultValue": ""
 	},
 	"a-affix/target": {
-		"description": "specifies the scrollable area dom node",
+		"description": "设置 Affix 需要监听其滚动事件的元素，值为一个返回对应 DOM 元素的函数",
 		"optionType": "() => HTMLElement",
 		"defaultValue": "() => window"
 	}

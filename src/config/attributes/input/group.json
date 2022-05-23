@@ -1,12 +1,17 @@
 {
 	"a-input-group/compact": {
-		"description": "Whether use compact style",
+		"description": "是否用紧凑模式",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-input-group/size": {
-		"description": "The size of Input.Group specifies the size of the included Input fields. Available: large default small",
+		"description": "Input.Group 中所有的 Input 的大小，可选 large default small",
 		"optionType": "string",
-		"defaultValue": "default"
+		"defaultValue": "default",
+		"options": [
+			"large",
+			"default",
+			"small"
+		]
 	}
 }

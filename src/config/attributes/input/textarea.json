@@ -1,17 +1,22 @@
 {
-	"a-textarea/autosize": {
-		"description": "Height autosize feature, can be set to true|false or an object { minRows: 2, maxRows: 6 }",
+	"a-textarea/autoSize": {
+		"description": "自适应内容高度，可设置为 true|false 或对象：{ minRows: 2, maxRows: 6 }",
 		"optionType": "boolean|object",
 		"defaultValue": "false"
 	},
 	"a-textarea/defaultValue": {
-		"description": "The initial input content",
+		"description": "输入框默认内容",
 		"optionType": "string",
 		"defaultValue": ""
 	},
 	"a-textarea/value": {
-		"description": "The input content value",
+		"description": "输入框内容",
 		"optionType": "string",
+		"defaultValue": ""
+	},
+	"a-textarea/allowClear": {
+		"description": "可以点击清除图标删除内容",
+		"optionType": "boolean",
 		"defaultValue": ""
 	}
 }

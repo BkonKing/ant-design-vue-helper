@@ -55,8 +55,11 @@ export class App {
 
   setConfig() {
     // https://github.com/Microsoft/vscode/issues/24464
+    // 读取配置值
     const config = workspace.getConfiguration('editor');
+    // editor.quickSuggestions: 控制是否在键入时自动显示建议
     const quickSuggestions = config.get('quickSuggestions');
+    // 在字符串内启用快速建议。判断是否启用
     if(!quickSuggestions["strings"]) {
       config.update("quickSuggestions", { "strings": true }, true);
     }
@@ -118,6 +121,8 @@ const HTML_CONTENT = (query: Query) => {
     </body>`;
 };
 
+// implements是对某个接口的实现，必须满足接口的类型规范
+// 供应器函数还必须实现`provideTextDocumentContent`函数，这个函数需要传入uri参数和取消式令牌(cancellation token)调用。
 export class AntdvDocsContentProvider implements TextDocumentContentProvider {
     private _onDidChange = new EventEmitter<Uri>();
 
@@ -256,6 +261,7 @@ export class AntdvCompletionItemProvider implements CompletionItemProvider {
   }
 
   buildTagSuggestion(tag, tagVal, id) {
+    console.log(12);
     const snippets = [];
     let index = 0;
     let that = this;

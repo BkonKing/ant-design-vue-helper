@@ -1,26 +1,26 @@
 {
 	"a-select-option/disabled": {
-		"description": "Disable this option",
+		"description": "是否禁用",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-select-option/key": {
-		"description": "Same usage as value. If Vue request you to set this property, you can set it to value of option, and then omit value property.",
+		"description": "和 value 含义一致。如果 Vue 需要你设置此项，此项值与 value 的值相同，然后可以省略 value 设置.",
 		"optionType": "string",
 		"defaultValue": ""
 	},
 	"a-select-option/title": {
-		"description": "title of Select after select this Option",
+		"description": "选中该 Option 后，Select 的 title",
 		"optionType": "string",
 		"defaultValue": "-"
 	},
 	"a-select-option/value": {
-		"description": "default to filter with this property",
+		"description": "默认根据此属性值进行筛选",
 		"optionType": "string|number",
 		"defaultValue": "-"
 	},
 	"a-select-option/class": {
-		"description": "additional class to option",
+		"description": "Option 器类名",
 		"optionType": "string",
 		"defaultValue": "-"
 	}

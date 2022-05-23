@@ -1,16 +1,16 @@
 {
 	"a-layout/class": {
-		"description": "container className",
+		"description": "容器 class",
 		"optionType": "string",
 		"defaultValue": "-"
 	},
 	"a-layout/style": {
-		"description": "to customize the styles",
+		"description": "指定样式",
 		"optionType": "object|string",
 		"defaultValue": "-"
 	},
 	"a-layout/hasSider": {
-		"description": "whether contain Sider in children, don't have to assign it normally. Useful in ssr avoid style flickering",
+		"description": "表示子元素里有 Sider，一般不用指定。可用于服务端渲染时避免样式闪动",
 		"optionType": "boolean",
 		"defaultValue": "-"
 	}

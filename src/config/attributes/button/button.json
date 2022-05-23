@@ -1,49 +1,49 @@
 {
 	"a-button/disabled": {
-		"description": "disabled state of button",
+		"description": "按钮失效状态",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-button/ghost": {
-		"description": "make background transparent and invert text and border colors, added in 2.7",
+		"description": "幽灵属性，使按钮背景透明",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-button/htmlType": {
-		"description": "set the original html type of button, see: MDN",
+		"description": "设置 button 原生的 type 值，可选值请参考 HTML 标准",
 		"optionType": "string",
 		"defaultValue": "button"
 	},
 	"a-button/icon": {
-		"description": "set the icon of button, see: Icon component",
+		"description": "设置按钮的图标类型",
 		"optionType": "string",
 		"defaultValue": "-"
 	},
 	"a-button/loading": {
-		"description": "set the loading status of button",
+		"description": "设置按钮载入状态",
 		"optionType": "boolean | { delay: number }",
 		"defaultValue": "false"
 	},
 	"a-button/shape": {
 		"options": ["circle", "round"],
-		"description": "can be set to circle or omitted",
+		"description": "设置按钮形状，可选值为 circle、 round 或者不设",
 		"optionType": "string",
 		"defaultValue": "-"
 	},
 	"a-button/size": {
     "options": ["small", "large"],
-		"description": "can be set to small large or omitted",
+		"description": "设置按钮大小，可选值为 small large 或者不设",
 		"optionType": "string",
 		"defaultValue": "default"
 	},
 	"a-button/type": {
-    "options": ["primary", "ghost", "dashed", "danger"],
-		"description": "can be set to primary ghost dashed danger(added in 2.7) or omitted (meaning default)",
+    "options": ["primary", "dashed", "danger", "link"],
+		"description": "设置按钮类型，可选值为 primary dashed danger link 或者不设",
 		"optionType": "string",
 		"defaultValue": "default"
 	},
 	"a-button/block": {
-		"description": "option to fit button width to its parent width",
+		"description": "将按钮宽度调整为其父宽度的选项",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	}

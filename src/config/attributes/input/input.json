@@ -1,52 +1,67 @@
 {
 	"a-input/addonAfter": {
-		"description": "The label text displayed after (on the right side of) the input field.",
+		"description": "带标签的 input，设置后置标签",
 		"optionType": "string|slot",
 		"defaultValue": ""
 	},
 	"a-input/addonBefore": {
-		"description": "The label text displayed before (on the left side of) the input field.",
+		"description": "带标签的 input，设置前置标签",
 		"optionType": "string|slot",
 		"defaultValue": ""
 	},
 	"a-input/defaultValue": {
-		"description": "The initial input content",
+		"description": "输入框默认内容",
 		"optionType": "string",
 		"defaultValue": ""
 	},
 	"a-input/disabled": {
-		"description": "Whether the input is disabled.",
+		"description": "是否禁用状态，默认为 false",
 		"optionType": "boolean",
 		"defaultValue": "false"
 	},
 	"a-input/id": {
-		"description": "The ID for input",
+		"description": "输入框的 id",
 		"optionType": "string",
 		"defaultValue": ""
 	},
+	"a-input/maxLength": {
+		"description": "最大长度",
+		"optionType": "number",
+		"defaultValue": ""
+	},
 	"a-input/prefix": {
-		"description": "The prefix icon for the Input.",
+		"description": "带有前缀图标的 input",
 		"optionType": "string|slot",
 		"defaultValue": ""
 	},
 	"a-input/size": {
-		"description": "The size of the input box. Note: in the context of a form, the large size is used. Available: large default small",
+		"description": "控件大小。注：标准表单内的输入框大小限制为 large。可选 large default small",
 		"optionType": "string",
-		"defaultValue": "default"
+		"defaultValue": "default",
+		"options": [
+			"large",
+			"default",
+			"small"
+		]
 	},
 	"a-input/suffix": {
-		"description": "The suffix icon for the Input.",
+		"description": "带有后缀图标的 input",
 		"optionType": "string|slot",
 		"defaultValue": ""
 	},
 	"a-input/type": {
-		"description": "The type of input, see: MDN(use Input.TextArea instead of type=\"textarea\")",
+		"description": "声明 input 类型，同原生 input 标签的 type 属性(请直接使用 Input.TextArea 代替 type=\"textarea\")。",
 		"optionType": "string",
 		"defaultValue": "text"
 	},
 	"a-input/value": {
-		"description": "The input content value",
+		"description": "输入框内容",
 		"optionType": "string",
+		"defaultValue": ""
+	},
+	"a-input/allowClear": {
+		"description": "可以点击清除图标删除内容",
+		"optionType": "boolean",
 		"defaultValue": ""
 	}
 }

@@ -1,0 +1,12 @@
+{
+	"a-breadcrumb-item/href": {
+		"description": "链接的目的地",
+		"optionType": "string",
+		"defaultValue": "-"
+	},
+	"a-breadcrumb-item/overlay": {
+		"description": "下拉菜单的内容",
+		"optionType": "Menu | () => Menu",
+		"defaultValue": ""
+	}
+}

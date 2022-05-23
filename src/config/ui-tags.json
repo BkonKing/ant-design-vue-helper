@@ -2,60 +2,65 @@
   "a-button": {
     "defaults": ["type"],
     "attributes": ["disabled", "ghost", "htmlType", "icon", "loading", "shape", "size", "type", "block"],
-    "description": "to trigger an operation"
+    "description": "按钮用于开始一个即时操作。"
   },
   "a-icon": {
     "defaults": ["type"],
-    "attributes": ["type", "style", "theme", "spin", "component", "twoToneColor"],
-    "description": "semantic vector graphics"
+    "attributes": ["type", "style", "theme", "spin", "rotate", "component", "twoToneColor"],
+    "description": "语义化的矢量图形。"
   },
   "a-row": {
     "attributes": ["align","gutter","justify","type"],
     "subtags": ["a-col"],
+    "defaults": ["type"],
     "description": "a row in grid system"
   },
   "a-col": {
-    "defaults": [":span"],
-    "attributes": ["offset","order","pull","push","span","xs","sm","md","lg","xl","xxl"],
+    "defaults": ["flex"],
+    "attributes": ["flex", "offset","order","pull","push","span","xs","sm","md","lg","xl","xxl"],
     "description": "a column in grid system"
   },
   "a-layout": {
     "attributes": ["class","style","hasSider"],
     "subtags": ["a-layout-sider", "a-layout-header", "a-layout-content", "a-layout-footer"],
-    "description": "layout"
+    "description": "布局容器。 Layout.Header Layout.Footer Layout.Content API 与 Layout 相同"
   },
   "a-layout-sider": {
-    "attributes": ["breakpoint","class","collapsed","collapsedWidth","collapsible","defaultCollapsed","reverseArrow","style","theme","trigger","width"],
-    "description": "layout sider"
+    "attributes": ["breakpoint","class","collapsed","collapsedWidth","collapsible","defaultCollapsed","reverseArrow","style","theme","trigger","width", "zeroWidthTriggerStyle"],
+    "description": "侧边栏。"
   },
   "a-layout-header": {
+    "attributes": ["class","style","hasSider"],
     "description": "layout header"
   },
   "a-layout-content": {
+    "attributes": ["class","style","hasSider"],
     "description": "layout content"
   },
   "a-layout-footer": {
+    "attributes": ["class","style","hasSider"],
     "description": "layout footer"
   },
   "a-affix": {
     "attributes": ["offsetBottom","offsetTop","target"],
-    "description": "make an element stick to viewport"
+    "description": "将页面元素钉在可视范围。"
   },
   "a-breadcrumb": {
-    "attributes": ["params","routes","separator"],
+    "attributes": ["itemRender", "params","routes","separator"],
     "subtags": ["a-breadcrumb-item"],
-    "description": "a breadcrumb displays the current location within a hierarchy. It allows going back to states higher up in the hierarchy."
+    "description": "显示当前页面在系统层级结构中的位置，并能向上返回。"
   },
   "a-breadcrumb-item": {
+    "attributes": ["href", "overlay"],
     "description": "breadcrumb item"
   },
   "a-dropdown": {
-    "attributes": ["disabled","getPopupContainer","placement","trigger","visible"],
-    "description": "a dropdown list."
+    "attributes": ["disabled","destroyPopupOnHide","getPopupContainer","overlay","overlayClassName","overlayStyle","placement","trigger","visible"],
+    "description": "向下弹出的列表。"
   },
   "a-dropdown-button": {
-    "attributes": ["disabled","placement","size","trigger","type","visible"],
-    "description": "a dropdown button list."
+    "attributes": ["disabled","icon","placement","size","trigger","type","visible"],
+    "description": "带下拉框的按钮"
   },
   "a-menu": {
     "subtags": ["a-menu-item", "a-sub-menu"],
@@ -186,25 +191,52 @@
     ],
     "description": "Form is used to collect, validate, and submit the user input, usually contains various form items including checkbox, radio, input, select, and etc."
   },
+  "a-form-model": {
+    "subtags": ["a-form-model-item"],
+    "attributes": [
+      "model","rules","hideRequiredMark","labelAlign","layout","labelCol","wrapperCol","colon","validateOnRuleChange"
+    ],
+    "description": "具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。"
+  },
+  "a-form-model-item": {
+    "attributes": [
+      "prop","rules","autoLink","colon","extra","hasFeedback","help","htmlFor",
+      "label","labelCol","labelAlign","required","validateStatus","wrapperCol"
+    ],
+    "description": "具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。"
+  },
   "a-input": {
     "attributes": [
       "addonAfter","addonBefore","defaultValue","disabled",
-      "id","prefix","size","suffix","type","value"
+      "id","maxLength","prefix","size","suffix","type","value","allowClear"
     ],
-    "description": "A basic widget for getting the user input is a text field."
+    "description": "通过鼠标或键盘输入内容，是最基础的表单域的包装。"
   },
   "a-textarea": {
     "attributes": [
-      "autosize","defaultValue","value"
+      "autoSize","defaultValue","value","allowClear"
     ],
-    "description": "A basic widget for getting the user textarea is a text field."
+    "description": "文本框"
+  },
+  "a-input-search": {
+    "attributes": [
+      "enterButton","loading"
+    ],
+    "description": "搜索框"
   },
   "a-input-group": {
     "subtags": ["a-input"],
     "attributes": [
       "compact","size"
     ],
-    "description": "A basic widget for getting the user input is a text field."
+    "defaults": ["compact"],
+    "description": "输入框的组合展现。 \n 注意：使用 compact 模式时，不需要通过 Col 来控制宽度。"
+  },
+  "a-input-password": {
+    "attributes": [
+      "visibilityToggle"
+    ],
+    "description": "密码框"
   },
   "a-input-number": {
     "attributes": [
@@ -239,19 +271,19 @@
       "defaultActiveFirstOption","defaultValue","disabled",
       "dropdownClassName","dropdownMatchSelectWidth","dropdownStyle",
       "filterOption","firstActiveValue","getPopupContainer",
-      "labelInValue","maxTagCount","maxTagPlaceholder","mode",
+      "labelInValue","maxTagCount","maxTagPlaceholder","maxTagTextLength","mode",
       "notFoundContent","optionFilterProp","optionLabelProp",
       "placeholder","showSearch","showArrow","size","suffixIcon",
       "tokenSeparators","value","options","defaultOpen","open"
     ],
-    "description": "Select component to select value from options."
+    "description": "下拉选择器"
   },
   "a-select-option": {
     "defaults": ["key", "value"],
     "attributes": [
       "disabled","key","title","value","class"
     ],
-    "description": "select option."
+    "description": "下拉选择器选项"
   },
   "a-slider": {
     "attributes": [

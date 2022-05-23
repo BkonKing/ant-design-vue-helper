@@ -7,6 +7,7 @@ import * as layout from './attributes/layout/layout.json'
 import * as layoutSider from './attributes/layout/layoutSider.json'
 import * as affix from './attributes/affix/affix.json'
 import * as breadcrumb from './attributes/breadcrumb/breadcrumb.json'
+import * as breadcrumbItem from './attributes/breadcrumb/breadcrumbItem.json'
 import * as dropdown from './attributes/dropdown/dropdown.json'
 import * as dropdownButton from './attributes/dropdown/dropdownButton.json'
 import * as menu from './attributes/menu/menu.json'
@@ -27,6 +28,8 @@ import * as weekPicker from './attributes/date-picker/week.json'
 import * as inputGroup from './attributes/input/group.json'
 import * as input from './attributes/input/input.json'
 import * as inputTextArea from './attributes/input/textarea.json'
+import * as inputSearch from './attributes/input/search.json'
+import * as inputPassword from './attributes/input/password.json'
 
 import * as inputNumber from './attributes/inputNumber/number.json'
 
@@ -109,6 +112,8 @@ import * as divider from './attributes/divider/divider.json'
 
 import * as comment from './attributes/comment/comment.json'
 
+import * as icon from './attributes/icon/icon.json'
+
 
 export default {
   ...form,
@@ -120,6 +125,7 @@ export default {
   ...layoutSider,
   ...affix,
   ...breadcrumb,
+  ...breadcrumbItem,
   ...dropdownButton,
   ...dropdown,
   ...menu,
@@ -139,6 +145,8 @@ export default {
   ...input,
   ...inputGroup,
   ...inputTextArea,
+  ...inputSearch,
+  ...inputPassword,
   ...inputNumber,
   ...radio,
   ...radioGroup,
@@ -198,4 +206,5 @@ export default {
     }
   },
   ...comment,
+  ...icon
 }

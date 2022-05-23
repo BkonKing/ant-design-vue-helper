@@ -1,42 +1,47 @@
 {
 	"a-dropdown/disabled": {
-		"description": "whether the dropdown menu is disabled",
+		"description": "菜单是否禁用",
 		"optionType": "boolean",
 		"defaultValue": "-"
 	},
+	"a-dropdown/destroyPopupOnHide": {
+		"description": "关闭后是否销毁 Dropdown",
+		"optionType": "boolean",
+		"defaultValue": "false"
+	},
 	"a-dropdown/getPopupContainer": {
-		"description": "to set the container of the dropdown menu. The default is to create a div element in body, you can reset it to the scrolling area and make a relative reposition. example",
+		"description": "菜单渲染父节点。默认渲染到 body 上，如果你遇到菜单滚动定位问题，试试修改为滚动的区域，并相对其定位。",
 		"optionType": "Function(triggerNode)",
 		"defaultValue": "() => document.body"
 	},
 	"a-dropdown/overlay": {
-		"description": "the dropdown menu",
+		"description": "菜单",
 		"optionType": "Menu",
 		"defaultValue": "-"
 	},
 	"a-dropdown/overlayClassName": {
-		"description": "Class name of the dropdown root element",
+		"description": "下拉根元素的类名称",
 		"optionType": "string",
 		"defaultValue": "-"
 	},
 	"a-dropdown/overlayStyle": {
-		"description": "Style of the dropdown root element",
+		"description": "下拉根元素的样式",
 		"optionType": "object",
 		"defaultValue": "-"
 	},
 	"a-dropdown/placement": {
 		"options": ["bottomLeft", "bottomCenter", "bottomRight", "topLeft", "topCenter", "topRight"],
-		"description": "placement of pop menu: bottomLeft bottomCenter bottomRight topLeft topCenter topRight",
+		"description": "菜单弹出位置：bottomLeft bottomCenter bottomRight topLeft topCenter topRight",
 		"optionType": "String",
 		"defaultValue": "bottomLeft"
 	},
 	"a-dropdown/trigger": {
-		"description": "the trigger mode which executes the drop-down action",
+		"description": "触发下拉的行为, 移动端不支持 hover",
 		"optionType": "Array<click|hover|contextmenu>",
 		"defaultValue": "['hover']"
 	},
 	"a-dropdown/visible": {
-		"description": "whether the dropdown menu is visible",
+		"description": "菜单是否显示",
 		"optionType": "boolean",
 		"defaultValue": "-"
 	}

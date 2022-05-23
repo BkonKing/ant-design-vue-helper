@@ -1,22 +1,22 @@
 {
 	"a-breadcrumb/itemRender": {
-		"description": "Custom item renderer, slot=\"itemRender\" and slot-scope=\"{route, params, routes, paths}\"",
-		"optionType": "({route, params, routes, paths}) => vNode",
+		"description": "自定义链接函数，和 vue-router 配置使用， 也可使用 slot=\"itemRender\" 和 slot-scope=\"props\"",
+		"optionType": "({route, params, routes, paths, h}) => vNode",
 		"defaultValue": ""
 	},
 	"a-breadcrumb/params": {
-		"description": "Routing parameters",
+		"description": "路由的参数",
 		"optionType": "object",
 		"defaultValue": ""
 	},
 	"a-breadcrumb/routes": {
-		"description": "The routing stack information of router",
-		"optionType": "object[]",
+		"description": "router 的路由栈信息",
+		"optionType": "routes[]",
 		"defaultValue": ""
 	},
 	"a-breadcrumb/separator": {
-		"description": "Custom separator",
+		"description": "分隔符自定义",
 		"optionType": "string|slot",
-		"defaultValue": ""
+		"defaultValue": "/"
 	}
 }
